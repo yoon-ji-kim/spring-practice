@@ -5,8 +5,7 @@
 		<artifactId>spring-practice</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>emaillist03</artifactId>
-	
+	<artifactId>guestbook03</artifactId>
 	<packaging>war</packaging>
 	
 	<properties>
@@ -67,7 +66,7 @@
 	</dependencies>	
 	
 	<build>
-		<finalName>emaillist03</finalName>
+		<finalName>guestbook03</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

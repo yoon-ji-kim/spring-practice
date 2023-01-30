@@ -37,6 +37,12 @@ public class GuestbookController {
 		return "/WEB-INF/views/deleteform.jsp";
 	
 	}
+//	/delete?no=${vo.no}
+//	@RequestMapping(value ="/delete", method = RequestMethod.GET)
+//	public String delete(@RequestParam(value="no")int no, Model model) {
+//		model.addAttribute("no", no);
+//		return "/WEB-INF/views/deleteform.jsp";
+//	}
 	
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public String delete(GuestbookVo vo) {

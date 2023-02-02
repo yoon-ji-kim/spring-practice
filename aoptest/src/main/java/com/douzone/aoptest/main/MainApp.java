@@ -1,7 +1,11 @@
 package com.douzone.aoptest.main;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.douzone.aoptest.service.ProductService;
+import com.douzone.aoptest.vo.ProductVo;
 
 public class MainApp {
 
@@ -14,6 +18,8 @@ public class MainApp {
 		ProductVo vo = ps.find("TV");
 		//화면 출력
 		System.out.println(vo);
+		
+		((AbstractApplicationContext)ac).close();
 	}
 
 }

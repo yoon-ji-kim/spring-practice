@@ -10,6 +10,7 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<mvc:annotation-driven />
 	
 	<!-- Multipart Resolver 설정 -->
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -20,6 +21,9 @@
       <!-- defaultEncoding -->
       <property name="defaultEncoding" value="utf-8" />
 	</bean>
+	<!--MVC URL과 Resource(xml,html등)를 Mapping -->
+	<!-- 					images로 URL이 들어오면    file: 경로에서 /images/~~~.png를 찾아-->
+	<mvc:resources mapping="/images/**" location="file:/fileupload-files/"/>
 	
 	<context:annotation-config />
 	<context:component-scan base-package="com.douzone.fileupload.controller" />

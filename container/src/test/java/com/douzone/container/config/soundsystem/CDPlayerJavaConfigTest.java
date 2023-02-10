@@ -11,10 +11,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.douzone.container.soundsystem.CDPlayer;
 
-//spring에서 제공해주는 runner 설정: Container 안에서 작동
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(locations = {"classpath:com/douzone/container/config/soundsystem/applicationContext.xml"}) //container 설정
-public class CDPlayerXmlConfigTest {
+@ContextConfiguration(classes = {CDPlayerConfig.class}) //빈 생성o autuwired는 CDPlayerConfig에서 configuration
+public class CDPlayerJavaConfigTest {
 	@Autowired
 	private CDPlayer cdPlayer;
 	

@@ -14,6 +14,7 @@ public class DVDPlayer {
 	public void setDvd(DigitalVideoDisc dvd) {
 		this.dvd = dvd;
 	}
+	
 	public String play() {
 		return dvd.play();
 	}
